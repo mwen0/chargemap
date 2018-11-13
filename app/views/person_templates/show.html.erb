@@ -106,7 +106,9 @@
       </dt>
       <!-- Display address start -->
       <dd>
-        <%= @person.address %>
+        <div>
+          <%= render partial: "person_templates/one_photo_map" %>
+        </div>
       </dd>
       <!-- Display address end -->
 

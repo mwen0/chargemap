@@ -1,6 +1,11 @@
 class PeopleController < ApplicationController
   def index
     @people = Person.all
+    @location_hash = Gmaps4rails.build_markers(@people.where.not(:address_latitude => nil)) do |person, marker|
+      marker.lat person.address_latitude
+      marker.lng person.address_longitude
+      marker.infowindow "<h5><a href='/people/#{person.id}'>#{person.family_name}</a></h5><small>#{person.address_formatted_address}</small>"
+    end
 
     render("person_templates/index.html.erb")
   end
