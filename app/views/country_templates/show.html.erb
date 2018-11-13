@@ -1,0 +1,91 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Country #<%= @country.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/countries" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link country start -->
+      <div class="col">
+        <a href="/countries/<%= @country.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit country
+        </a>
+      </div>
+      <!-- Edit link country end -->
+
+      <!-- Delete link country start -->
+      <div class="col">
+        <a href="/delete_country/<%= @country.id %>" class="btn btn-block btn-outline-secondary">
+          Delete country
+        </a>
+      </div>
+      <!-- Delete link country end -->
+    </div>
+
+    <dl>
+      <dt>
+        Name
+      </dt>
+      <!-- Display name start -->
+      <dd>
+        <%= @country.name %>
+      </dd>
+      <!-- Display name end -->
+
+      <dt>
+        Isocode
+      </dt>
+      <!-- Display isocode start -->
+      <dd>
+        <%= @country.isocode %>
+      </dd>
+      <!-- Display isocode end -->
+
+      <dt>
+        Continent code
+      </dt>
+      <!-- Display continent_code start -->
+      <dd>
+        <%= @country.continent_code %>
+      </dd>
+      <!-- Display continent_code end -->
+
+      <dt>
+        Flag image
+      </dt>
+      <!-- Display flag_image start -->
+      <dd>
+        <%= @country.flag_image %>
+      </dd>
+      <!-- Display flag_image end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@country.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@country.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
