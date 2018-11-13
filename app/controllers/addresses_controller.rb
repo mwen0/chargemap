@@ -69,6 +69,14 @@ class AddressesController < ApplicationController
     end
   end
 
+  def destroy_row_from_country
+    @address = Address.find(params.fetch("id_to_remove"))
+
+    @address.destroy
+
+    redirect_to("/countries/#{@address.country_id}", notice: "Address deleted successfully.")
+  end
+
   def destroy_row
     @address = Address.find(params.fetch("id_to_remove"))
 
