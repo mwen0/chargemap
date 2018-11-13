@@ -1,6 +1,6 @@
 class CountriesController < ApplicationController
   def index
-    @countries = Country.all
+    @countries = Country.page(params[:page]).per(10)
 
     render("country_templates/index.html.erb")
   end
