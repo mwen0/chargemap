@@ -1,4 +1,6 @@
 ActiveAdmin.register Country do
+
+ permit_params :name, :isocode, :continent_code, :flag_image
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
