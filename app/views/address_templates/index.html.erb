@@ -144,7 +144,11 @@
 
         <!-- Display address.country_id start -->
         <td>
-          <%= address.country.name %>
+          <% if address.country.present? %>
+            <a href="/countries/<%= address.country.id %>">
+              <%= address.country.name %>
+            </a>
+          <% end %>
         </td>
         <!-- Display address.country_id end -->
 

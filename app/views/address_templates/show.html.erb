@@ -115,7 +115,11 @@
       </dt>
       <!-- Display country_id start -->
       <dd>
-        <%= @address.country_id %>
+        <% if @address.country.present? %>
+          <a href="/countries/<%= @address.country_id %>">
+            <%= @address.country.name %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display country_id end -->
 
