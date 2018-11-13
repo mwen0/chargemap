@@ -1,0 +1,136 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Person #<%= @person.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/people" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link person start -->
+      <div class="col">
+        <a href="/people/<%= @person.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit person
+        </a>
+      </div>
+      <!-- Edit link person end -->
+
+      <!-- Delete link person start -->
+      <div class="col">
+        <a href="/delete_person/<%= @person.id %>" class="btn btn-block btn-outline-secondary">
+          Delete person
+        </a>
+      </div>
+      <!-- Delete link person end -->
+    </div>
+
+    <dl>
+      <dt>
+        Family name
+      </dt>
+      <!-- Display family_name start -->
+      <dd>
+        <%= @person.family_name %>
+      </dd>
+      <!-- Display family_name end -->
+
+      <dt>
+        First name
+      </dt>
+      <!-- Display first_name start -->
+      <dd>
+        <%= @person.first_name %>
+      </dd>
+      <!-- Display first_name end -->
+
+      <dt>
+        Gender
+      </dt>
+      <!-- Display gender start -->
+      <dd>
+        <%= @person.gender %>
+      </dd>
+      <!-- Display gender end -->
+
+      <dt>
+        Birth date
+      </dt>
+      <!-- Display birth_date start -->
+      <dd>
+        <%= @person.birth_date %>
+      </dd>
+      <!-- Display birth_date end -->
+
+      <dt>
+        Phone number1
+      </dt>
+      <!-- Display phone_number1 start -->
+      <dd>
+        <%= @person.phone_number1 %>
+      </dd>
+      <!-- Display phone_number1 end -->
+
+      <dt>
+        Phone number2
+      </dt>
+      <!-- Display phone_number2 start -->
+      <dd>
+        <%= @person.phone_number2 %>
+      </dd>
+      <!-- Display phone_number2 end -->
+
+      <dt>
+        Website
+      </dt>
+      <!-- Display website start -->
+      <dd>
+        <%= @person.website %>
+      </dd>
+      <!-- Display website end -->
+
+      <dt>
+        Address
+      </dt>
+      <!-- Display address_id start -->
+      <dd>
+        <%= @person.address_id %>
+      </dd>
+      <!-- Display address_id end -->
+
+      <dt>
+        Address
+      </dt>
+      <!-- Display address start -->
+      <dd>
+        <%= @person.address %>
+      </dd>
+      <!-- Display address end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@person.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@person.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
