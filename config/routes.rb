@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "people#index"
   # Routes for the Address resource:
 
   # CREATE
