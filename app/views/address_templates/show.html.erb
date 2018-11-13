@@ -1,0 +1,145 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Address #<%= @address.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/addresses" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link address start -->
+      <div class="col">
+        <a href="/addresses/<%= @address.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit address
+        </a>
+      </div>
+      <!-- Edit link address end -->
+
+      <!-- Delete link address start -->
+      <div class="col">
+        <a href="/delete_address/<%= @address.id %>" class="btn btn-block btn-outline-secondary">
+          Delete address
+        </a>
+      </div>
+      <!-- Delete link address end -->
+    </div>
+
+    <dl>
+      <dt>
+        Latitude
+      </dt>
+      <!-- Display latitude start -->
+      <dd>
+        <%= @address.latitude %>
+      </dd>
+      <!-- Display latitude end -->
+
+      <dt>
+        Longitude
+      </dt>
+      <!-- Display longitude start -->
+      <dd>
+        <%= @address.longitude %>
+      </dd>
+      <!-- Display longitude end -->
+
+      <dt>
+        Name
+      </dt>
+      <!-- Display name start -->
+      <dd>
+        <%= @address.name %>
+      </dd>
+      <!-- Display name end -->
+
+      <dt>
+        Address line1
+      </dt>
+      <!-- Display address_line1 start -->
+      <dd>
+        <%= @address.address_line1 %>
+      </dd>
+      <!-- Display address_line1 end -->
+
+      <dt>
+        Address line2
+      </dt>
+      <!-- Display address_line2 start -->
+      <dd>
+        <%= @address.address_line2 %>
+      </dd>
+      <!-- Display address_line2 end -->
+
+      <dt>
+        Town
+      </dt>
+      <!-- Display town start -->
+      <dd>
+        <%= @address.town %>
+      </dd>
+      <!-- Display town end -->
+
+      <dt>
+        Post code
+      </dt>
+      <!-- Display post_code start -->
+      <dd>
+        <%= @address.post_code %>
+      </dd>
+      <!-- Display post_code end -->
+
+      <dt>
+        State or province
+      </dt>
+      <!-- Display state_or_province start -->
+      <dd>
+        <%= @address.state_or_province %>
+      </dd>
+      <!-- Display state_or_province end -->
+
+      <dt>
+        Has ev parking places
+      </dt>
+      <!-- Display has_ev_parking_places start -->
+      <dd>
+        <%= @address.has_ev_parking_places %>
+      </dd>
+      <!-- Display has_ev_parking_places end -->
+
+      <dt>
+        Country
+      </dt>
+      <!-- Display country_id start -->
+      <dd>
+        <%= @address.country_id %>
+      </dd>
+      <!-- Display country_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@address.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@address.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
