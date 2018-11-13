@@ -1,6 +1,7 @@
 class PeopleController < ApplicationController
   def index
-    @people = Person.page(params[:page]).per(10)
+    @q = Person.ransack(params[:q])
+    @people = @q.result(:distinct => true).page(params[:page]).per(10)
     @location_hash = Gmaps4rails.build_markers(@people.where.not(:address_latitude => nil)) do |person, marker|
       marker.lat person.address_latitude
       marker.lng person.address_longitude

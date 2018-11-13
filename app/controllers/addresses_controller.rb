@@ -1,6 +1,7 @@
 class AddressesController < ApplicationController
   def index
-    @addresses = Address.page(params[:page]).per(10)
+    @q = Address.ransack(params[:q])
+    @addresses = @q.result(:distinct => true).includes(:country).page(params[:page]).per(10)
 
     render("address_templates/index.html.erb")
   end
