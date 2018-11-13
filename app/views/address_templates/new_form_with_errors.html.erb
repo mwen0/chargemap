@@ -134,7 +134,7 @@
     </label>
 
     <!-- Input for country_id start -->
-    <input type="text" id="country_id" name="country_id" class="form-control" value="<%= @address.country_id %>">
+    <%= select_tag(:country_id, options_from_collection_for_select(Country.all, :id, :name, @address.country_id), :class => "form-control") %>
     <!-- Input for country_id end -->
   </div>
   <!-- Label and input for country_id end -->
