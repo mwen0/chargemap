@@ -1,4 +1,3 @@
-<!-- Validation failure messages -->
 <% if @person.present? %>
   <% if @person.errors.any? %>
     <% @person.errors.full_messages.each do |message| %>
@@ -16,116 +15,79 @@
 
 <hr>
 
-<!-- Form person start -->
 <form action="/create_person" method="post">
-<!-- Form person end -->
 
-  <!-- Label and input for family_name start -->
   <div class="form-group">
     <label for="family_name">
       Family name
     </label>
 
-    <!-- Input for family_name start -->
     <input type="text" id="family_name" name="family_name" class="form-control" value="<%= @person.family_name %>">
-    <!-- Input for family_name end -->
   </div>
-  <!-- Label and input for family_name end -->
 
-  <!-- Label and input for first_name start -->
   <div class="form-group">
     <label for="first_name">
       First name
     </label>
 
-    <!-- Input for first_name start -->
     <input type="text" id="first_name" name="first_name" class="form-control" value="<%= @person.first_name %>">
-    <!-- Input for first_name end -->
   </div>
-  <!-- Label and input for first_name end -->
 
-  <!-- Label and input for gender start -->
   <div class="form-check">
     <input type="hidden" value="0" name="gender">
-    <!-- Input for gender start -->
     <input id="gender" class="form-check-input" name="gender" type="checkbox" <%= "checked" if @person.gender %>>
-    <!-- Input for gender end -->
     <label for="gender" class="form-check-label">
       Gender
     </label>
   </div>
 
-  <!-- Label and input for birth_date start -->
   <div class="form-group">
     <label for="birth_date">
       Birth date
     </label>
 
-    <!-- Input for birth_date start -->
     <input type="text" id="birth_date" name="birth_date" class="form-control" value="<%= @person.birth_date %>">
-    <!-- Input for birth_date end -->
   </div>
-  <!-- Label and input for birth_date end -->
 
-  <!-- Label and input for phone_number1 start -->
   <div class="form-group">
     <label for="phone_number1">
       Phone number1
     </label>
 
-    <!-- Input for phone_number1 start -->
     <input type="text" id="phone_number1" name="phone_number1" class="form-control" value="<%= @person.phone_number1 %>">
-    <!-- Input for phone_number1 end -->
   </div>
-  <!-- Label and input for phone_number1 end -->
 
-  <!-- Label and input for phone_number2 start -->
   <div class="form-group">
     <label for="phone_number2">
       Phone number2
     </label>
 
-    <!-- Input for phone_number2 start -->
     <input type="text" id="phone_number2" name="phone_number2" class="form-control" value="<%= @person.phone_number2 %>">
-    <!-- Input for phone_number2 end -->
   </div>
-  <!-- Label and input for phone_number2 end -->
 
-  <!-- Label and input for website start -->
   <div class="form-group">
     <label for="website">
       Website
     </label>
 
-    <!-- Input for website start -->
     <input type="text" id="website" name="website" class="form-control" value="<%= @person.website %>">
-    <!-- Input for website end -->
   </div>
-  <!-- Label and input for website end -->
 
-  <!-- Label and input for address_id start -->
   <div class="form-group">
     <label for="address_id">
       Address
     </label>
 
-    <!-- Input for address_id start -->
     <input type="text" id="address_id" name="address_id" class="form-control" value="<%= @person.address_id %>">
-    <!-- Input for address_id end -->
   </div>
-  <!-- Label and input for address_id end -->
 
-  <!-- Label and input for address start -->
   <div class="form-group">
     <label for="address">
       Address
     </label>
 
-    <!-- Input for address start -->
     <input type="text" id="address" name="address" class="form-control" value="<%= @person.address %>">
-    <!-- Input for address end -->
   </div>
-  <!-- Label and input for address end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create person

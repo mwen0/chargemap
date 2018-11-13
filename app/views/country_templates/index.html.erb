@@ -10,17 +10,13 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 <div class="row">
   <div class="col-md-12 mb-3">
     <%= render partial: "country_templates/countries_search_form" %>
   </div>
 </div>
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -62,47 +58,33 @@
 
       <% @countries.each do |country| %>
       <tr>
-        <!-- Display country.id start -->
         <td>
           <%= country.id %>
         </td>
-        <!-- Display country.id end -->
 
-        <!-- Display country.name start -->
         <td>
           <%= country.name %>
         </td>
-        <!-- Display country.name end -->
 
-        <!-- Display country.isocode start -->
         <td>
           <%= country.isocode %>
         </td>
-        <!-- Display country.isocode end -->
 
-        <!-- Display country.continent_code start -->
         <td>
           <%= country.continent_code %>
         </td>
-        <!-- Display country.continent_code end -->
 
-        <!-- Display country.flag_image start -->
         <td>
           <img src='<%= country.flag_image %>' class='img-fluid'>
         </td>
-        <!-- Display country.flag_image end -->
 
-        <!-- Display country.created_at start -->
         <td>
           <%= time_ago_in_words(country.created_at) %> ago
         </td>
-        <!-- Display country.created_at end -->
 
-        <!-- Display country.updated_at start -->
         <td>
           <%= time_ago_in_words(country.updated_at) %> ago
         </td>
-        <!-- Display country.updated_at end -->
 
         <td>
           <a href="/countries/<%= country.id %>">
