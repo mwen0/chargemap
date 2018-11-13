@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/firstdraft/draft_generators.git
+  revision: 9a7a4ab7505755c6c9949cb983dca0e10d8f8b9c
+  specs:
+    draft_generators (0.0.3)
+      devise
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -202,6 +209,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  draft_generators!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
