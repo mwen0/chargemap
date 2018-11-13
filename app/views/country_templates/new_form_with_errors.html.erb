@@ -17,7 +17,7 @@
 <hr>
 
 <!-- Form country start -->
-<form action="/create_country" method="post">
+<form action="/create_country" method="post" enctype="multipart/form-data">
 <!-- Form country end -->
 
   <!-- Label and input for name start -->
@@ -63,7 +63,7 @@
     </label>
 
     <!-- Input for flag_image start -->
-    <input type="text" id="flag_image" name="flag_image" class="form-control" value="<%= @country.flag_image %>">
+    <input type="file" id="flag_image" name="flag_image" class="form-control">
     <!-- Input for flag_image end -->
   </div>
   <!-- Label and input for flag_image end -->

@@ -24,7 +24,7 @@ class CountriesController < ApplicationController
     @country.name = params.fetch("name")
     @country.isocode = params.fetch("isocode")
     @country.continent_code = params.fetch("continent_code")
-    @country.flag_image = params.fetch("flag_image")
+    @country.flag_image = params.fetch("flag_image") if params.key?("flag_image")
 
     if @country.valid?
       @country.save
@@ -47,7 +47,7 @@ class CountriesController < ApplicationController
     @country.name = params.fetch("name")
     @country.isocode = params.fetch("isocode")
     @country.continent_code = params.fetch("continent_code")
-    @country.flag_image = params.fetch("flag_image")
+    @country.flag_image = params.fetch("flag_image") if params.key?("flag_image")
 
     if @country.valid?
       @country.save
