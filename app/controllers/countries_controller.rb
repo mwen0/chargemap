@@ -6,6 +6,7 @@ class CountriesController < ApplicationController
   end
 
   def show
+    @address = Address.new
     @country = Country.find(params.fetch("id_to_display"))
 
     render("country_templates/show.html.erb")

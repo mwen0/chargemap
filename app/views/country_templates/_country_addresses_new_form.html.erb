@@ -1,0 +1,119 @@
+<!-- Form address start -->
+<form action="/create_address_from_country" method="post">
+<!-- Form address end -->
+
+  <!-- Label and input for latitude start -->
+  <div class="form-group">
+    <label for="latitude">
+      Latitude
+    </label>
+
+    <!-- Input for latitude start -->
+    <input type="text" id="latitude" name="latitude" class="form-control" value="<%= @address.latitude %>">
+    <!-- Input for latitude end -->
+  </div>
+  <!-- Label and input for latitude end -->
+
+  <!-- Label and input for longitude start -->
+  <div class="form-group">
+    <label for="longitude">
+      Longitude
+    </label>
+
+    <!-- Input for longitude start -->
+    <input type="text" id="longitude" name="longitude" class="form-control" value="<%= @address.longitude %>">
+    <!-- Input for longitude end -->
+  </div>
+  <!-- Label and input for longitude end -->
+
+  <!-- Label and input for name start -->
+  <div class="form-group">
+    <label for="name">
+      Name
+    </label>
+
+    <!-- Input for name start -->
+    <input type="text" id="name" name="name" class="form-control" value="<%= @address.name %>">
+    <!-- Input for name end -->
+  </div>
+  <!-- Label and input for name end -->
+
+  <!-- Label and input for address_line1 start -->
+  <div class="form-group">
+    <label for="address_line1">
+      Address line1
+    </label>
+
+    <!-- Input for address_line1 start -->
+    <input type="text" id="address_line1" name="address_line1" class="form-control" value="<%= @address.address_line1 %>">
+    <!-- Input for address_line1 end -->
+  </div>
+  <!-- Label and input for address_line1 end -->
+
+  <!-- Label and input for address_line2 start -->
+  <div class="form-group">
+    <label for="address_line2">
+      Address line2
+    </label>
+
+    <!-- Input for address_line2 start -->
+    <input type="text" id="address_line2" name="address_line2" class="form-control" value="<%= @address.address_line2 %>">
+    <!-- Input for address_line2 end -->
+  </div>
+  <!-- Label and input for address_line2 end -->
+
+  <!-- Label and input for town start -->
+  <div class="form-group">
+    <label for="town">
+      Town
+    </label>
+
+    <!-- Input for town start -->
+    <input type="text" id="town" name="town" class="form-control" value="<%= @address.town %>">
+    <!-- Input for town end -->
+  </div>
+  <!-- Label and input for town end -->
+
+  <!-- Label and input for post_code start -->
+  <div class="form-group">
+    <label for="post_code">
+      Post code
+    </label>
+
+    <!-- Input for post_code start -->
+    <input type="text" id="post_code" name="post_code" class="form-control" value="<%= @address.post_code %>">
+    <!-- Input for post_code end -->
+  </div>
+  <!-- Label and input for post_code end -->
+
+  <!-- Label and input for state_or_province start -->
+  <div class="form-group">
+    <label for="state_or_province">
+      State or province
+    </label>
+
+    <!-- Input for state_or_province start -->
+    <input type="text" id="state_or_province" name="state_or_province" class="form-control" value="<%= @address.state_or_province %>">
+    <!-- Input for state_or_province end -->
+  </div>
+  <!-- Label and input for state_or_province end -->
+
+  <!-- Label and input for has_ev_parking_places start -->
+  <div class="form-group">
+    <label for="has_ev_parking_places">
+      Has ev parking places
+    </label>
+    <!-- Input for has_ev_parking_places start -->
+    <input id="has_ev_parking_places" class="form-check-input" name="has_ev_parking_places" type="checkbox" <%= "checked" if @address.has_ev_parking_places %>>
+    <!-- Input for has_ev_parking_places end -->
+  </div>
+
+  <!-- Label and input for country_id start -->
+  <!-- Input for country_id start -->
+  <input type="hidden" name="country_id" value="<%= @country.id %>">
+  <!-- Input for country_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create address
+  </button>
+</form>
